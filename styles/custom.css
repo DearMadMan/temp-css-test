@@ -260,7 +260,6 @@ p.star {
     padding: 10px 4px;
     line-height: 20px;
     background: #f5f5f5;
-    border-bottom: 1px solid #ccc;
 }
 
 .dishes .dish-list .active a {
@@ -348,5 +347,6 @@ p.star {
 }
 
 .nav-warp {
-    height: 40px;
+    min-height: 100px;
+    max-height: 100%;
 }
