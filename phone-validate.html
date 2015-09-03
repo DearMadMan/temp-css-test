@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html leng="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>phone-validate</title>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/custom.css">
+    <script src="scripts/vendor/modernizr.js"></script>
+    <script src="scripts/vendor/vue.js"></script>
+  </head>
+  <body>
+    <!-- if lt IE 10-->
+    <!-- <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
+    <!-- endif-->
+    <div class="page bg-green container-fluid">
+      <div class="row header-nav">
+        <div class="col-xs-4 text-center"><a href="#"><span class="fs-1-5 glyphicon glyphicon-chevron-left color-white"></span></a></div>
+        <div class="col-xs-4 text-center"><span class="fs-1-5 color-white bold ">验证</span></div>
+        <div class="col-xs-4"> </div>
+      </div>
+    </div>
+    <div class="container warp">
+      <form class="form form-horizontal ">
+        <div class="form-group">
+          <div class="col-xs-8">
+            <input placeholder="手机号码" value="" class="form-control">
+          </div>
+          <div class="col-xs-4"><span class="btn phone-code color-white">获取验证码</span></div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input placeholder="请输入手机验证码" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-4 col-xs-offset-4 text-center">
+            <button class="btn btn-primary bg-green no-boder color-white">确定</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="footer container-fluid">
+      <div class="col-xs-6 text-center active"><a href="#"><span class="glyphicon glyphicon-home color-black"><span class="under-text color-white font-web">首页</span></span></a></div>
+      <div class="col-xs-6 text-center"><a href="#"><span class="glyphicon glyphicon-user color-black"><span class="under-text color-white font-web">我的</span></span></a></div>
+    </div>
+  </body>
+</html>

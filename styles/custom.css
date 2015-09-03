@@ -1,0 +1,352 @@
+.no-boder,
+.phone-code {
+    border: none
+}
+
+.font-web,
+body {
+    font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif
+}
+
+.dest-title span,
+.footer span,
+.res-ul span.dest,
+.stars {
+    display: inline-block
+}
+
+.dish-img,
+.dish-title,
+.dishes,
+.order,
+.order-wrap {
+    overflow: hidden
+}
+
+.dishes,
+.dishes .dish-list,
+.height-full,
+.nav-warp,
+body,
+html {
+    /*height: 100%*/
+}
+
+li,
+ul {
+    list-style-type: none
+}
+
+body {
+    padding: 0;
+}
+
+.mg-l-15 {
+    margin-left: 15px
+}
+
+.mg-btm-8 {
+    margin-bottom: 8px
+}
+
+.mg-8-a,
+.warp {
+    margin: 8px auto
+}
+
+.bg-green,
+.phone-code {
+    background: #13B5B1
+}
+
+.bold {
+    font-weight: 700
+}
+
+.color-white {
+    color: #fff
+}
+
+.color-black,
+.footer span {
+    color: #282828
+}
+
+.fs-1-5 {
+    font-size: 1.3em
+}
+
+.header-nav {
+    height: 35x;
+    padding: 7px 0
+}
+
+.header-nav div,
+.header-nav span {
+    line-height: 35px
+}
+
+.phone-code {
+    border-radius: 4px;
+    margin-left: -15px
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0;
+    background: #f5f5f5;
+    border: 0;
+    margin: 0 auto;
+    z-index: 9999999;
+}
+
+.footer span {
+    font-size: 14px;
+    width: 80px;
+    min-height: 40px;
+    padding: 10px 0
+}
+
+.footer .active span,
+.res-ul a {
+    color: #13B5B1
+}
+
+.footer .active {
+    background: #fff;
+    color: #13B5B1
+}
+
+.res-ul {
+    padding: 0
+}
+
+.res-ul .res-title,
+.res-ul li {
+    width: 100%
+}
+
+.res-ul li {
+    max-height: 180px;
+    margin: 4px 0;
+    padding: 4px 0;
+    list-style: none;
+    background: #f5f5f5
+}
+
+.res-ul img {
+    width: 100px;
+    height: 100px
+}
+
+.res-ul .pull-left {
+    min-width: 100px;
+    max-width: 500px
+}
+
+.res-ul .pull-right {
+    max-width: 500px;
+    max-height: 160px;
+    text-align: left
+}
+
+.res-ul .res-title {
+    height: 40px;
+    font-size: 1.2em
+}
+
+.res-ul .res-title .p-title {
+    line-height: 40px
+}
+
+.res-ul .res-bottom {
+    height: 20px;
+    margin-top: 40px
+}
+
+.res-ul .res-description,
+.res-ul .res-dist {
+    max-width: 100px;
+    margin-left: 0
+}
+
+.res-ul span.dest {
+    margin-left: 15px
+}
+
+.res-ul p {
+    line-height: 20px
+}
+
+.res-ul .res-score {
+    color: #FE0F0F;
+    line-height: 12px
+}
+
+.stars,
+p.star {
+    line-height: 13px
+}
+
+p.star {
+    margin-top: -15px
+}
+
+.stars {
+    height: 13px;
+    background: url(../images/stars.gif)
+}
+
+.star-1 {
+    width: 15px
+}
+
+.star-2 {
+    width: 30px
+}
+
+.star-3 {
+    width: 45px
+}
+
+.star-4 {
+    width: 60px
+}
+
+.star-5 {
+    width: 77px
+}
+
+.dest-title {
+    padding: 10px 0;
+    background: #f5f5f5;
+    color: #282828
+}
+
+.dest-title span {
+    padding: 0 10px
+}
+
+.dishes {
+    padding: 0;
+    border-top: none;
+    position: absolute;
+    top:53px;
+    bottom: 0;
+    width: 100%;
+}
+
+.dishes .dish-list {
+    padding: 0;
+    width: 28%;
+    min-width: 90px;
+    margin-left: -1px
+}
+
+
+
+.dishes .dish-list li {
+    margin-top: 0
+}
+
+.dishes .dish-list a {
+    display: inline-block;
+    color: #282828;
+    width: 100%;
+    min-height: 20px;
+    text-align: center;
+    padding: 10px 4px;
+    line-height: 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.dishes .dish-list .active a {
+    color: red;
+    background: #fff
+}
+
+.tag {
+    padding: 0;
+    font-size: 14px;
+    color: #535353;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+}
+
+.nav-warp {
+    border-right: 1px solid #f5f5f5
+}
+
+.foods {
+    padding: 0;
+    width: 72%;
+    border: 0;
+    height: 120px;
+}
+
+.foods .dishes-wrap {
+    margin: 2px 5px 2px 10px;
+    min-height: 80px;
+    padding: 5px 0
+}
+
+.foods .dishes-wrap2 {
+    margin: 2px 5px 2px 10px;
+    padding: 5px 0
+}
+
+.foods .dishes-li {
+    overflow: hidden;
+    padding: 5px 0
+}
+
+.dish-img {
+    float: left;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 52px;
+    margin-right: 9px
+}
+
+.dish-img img {
+    height: 55px;
+    width: auto
+}
+
+.dish-title {
+    font-size: 15px;
+    margin-right: 6px;
+    max-height: 2.3em;
+    line-height: 1.15em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.dish-price {
+    color: red
+}
+
+.input-mini {
+    width: 20px;
+    text-align: center
+}
+
+.order-wrap {
+    padding: 5px 0
+}
+
+.pay-li {
+    margin: 5px 0
+}
+
+.nav-warp {
+    height: 40px;
+}
