@@ -27,10 +27,8 @@
     <div class="container-fluid  dishes">
         <div class="col-xs-3 dish-list">
             <div class="nav-warp">
-                <div class="nav nav-stacked swiper-wrapper ">
+                <div class="nav nav-stacked swiper-wrapper " id="categories">
                     <div class="swiper-slide tag active" style="height: 40px;"><a href="#">销量排行</a></div>
-                    <div class="swiper-slide tag"><a href="#">美味捷新品促销</a></div>
-                    <div class="swiper-slide tag"><a href="#">菜单</a></div>
                 </div>
             </div>
         </div>
@@ -45,9 +43,7 @@
         </div>
 
 
-    <script type="text/template" id="categroies_template">
-                        <div class="swiper-slide tag"><a href="#"><%= type_name%></a></div>
-    </script>
+
 
     <script type="text/template" id="dishes_template">
                     <ul class="nav nav-stacked ">
