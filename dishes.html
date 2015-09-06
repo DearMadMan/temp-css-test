@@ -17,6 +17,23 @@
     <!-- if lt IE 10-->
     <!-- <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
     <!-- endif-->
+    <!-- modal-start -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal-bg hide" id="modal-bg">
+    </div>
+    <div class="dish-modal hide" id="dish-modal">
+        <div class="dish-title">
+            <p>姜汤</p>
+        </div>
+        <div class="dish-description">
+            <div class="dish-image">
+                <img src="./images/dish.jpg">
+            </div>
+            <p class="dish-p-des">姜汤是民间普遍使用的驱寒、防治感冒的药汤。主要由生姜、大葱等配合熬成汤饮用。</p>
+        </div>
+    </div>
+    <!-- modal-stop -->
     <div class="page bg-green container-fluid">
         <div class="row header-nav">
             <div class="col-xs-4 text-center"><a href="#"><span class="fs-1-5 glyphicon glyphicon-chevron-left color-white"></span></a></div>
@@ -25,6 +42,7 @@
         </div>
     </div>
     <div class="container-fluid  dishes">
+        <!-- 餐饮分类列表 -->
         <div class="col-xs-3 dish-list">
             <div class="nav-warp">
                 <div class="nav nav-stacked swiper-wrapper " id="categories">
@@ -32,48 +50,55 @@
                 </div>
             </div>
         </div>
+        <!-- 餐饮分类列表结束 -->
+        <!-- 餐饮列表 -->
         <div class="col-xs-9 foods">
             <div class="swiper-wrapper" id="dishes">
-                
             </div>
         </div>
-        <div class="footer container-fluid">
+        <!-- 餐饮列表结束 -->
+        <div class="cart container-fluid hide" id="cart">
+        </div>
+        <script type="text/template" id="cart_template">
+            <!-- 菜品统计 -->
+            <div class="compute pull-left">￥
+                <%= amount %>
+            </div>
+            <div class="order pull-right">
+                <button class="btn btn-primary btn-order">选好了</button>
+            </div>
+            <!-- 菜品统计结束 -->
+        </script>
+        <!--  <div class="footer container-fluid">
             <div class="col-xs-6 text-center active"><a href="#"><span class="glyphicon glyphicon-home color-black"><span class="under-text color-white font-web">首页</span></span></a></div>
             <div class="col-xs-6 text-center"><a href="#"><span class="glyphicon glyphicon-cutlery color-black"><span class="under-text color-white font-web">点餐</span></span></a></div>
-        </div>
-
-
-
-
-    <script type="text/template" id="dishes_template">
-                    <ul class="nav nav-stacked ">
-                        <li role="presentation" class="tag active dishes-li">
-                            <div class="dishes-wrap">
-                                <div class="dish-img"><img src="./images/dish.jpg"></div>
-                                <div class="dish-title"><%= dish_name%></div>
-                                <div class="dish-title-sub"><span>月售 75 &nbsp;<span class="glyphicon glyphicon-thumbs-up"></span><span>14</span></span>
-                                </div>
-                            </div>
-                            <div class="dishes-wrap2">
-                                <div class="price pull-left"><span class="dish-price">￥<%= shop_price%></span><span class="dish-price-unit">元/份</span></div>
-                                <div class="dish-pick pull-right"><span class="glyphicon glyphicon-minus"></span>
-                                    <input type="text" value="0" class="input-mini"><span class="glyphicon glyphicon-plus"></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-    </script>
-
-
-
-
-
-
+        </div> -->
+        <script type="text/template" id="dishes_template">
+            <ul class="nav nav-stacked ">
+                <li role="presentation" class="tag active dishes-li">
+                    <div class="dishes-wrap">
+                        <div class="dish-img"><img src="<%= main_picture %>"></div>
+                        <div class="dish-title">
+                            <%= dish_name%>
+                        </div>
+                        <div class="dish-title-sub"><span>月售 75 &nbsp;<span class="glyphicon glyphicon-thumbs-up"></span><span>14</span></span>
+                        </div>
+                    </div>
+                    <div class="dishes-wrap2">
+                        <div class="price pull-left"><span class="dish-price">￥<%= shop_price%></span><span class="dish-price-unit">元/份</span></div>
+                        <div class="dish-pick pull-right">
+                            <span class="glyphicon glyphicon-minus <% if(sold<=0){ %> hide<% } %>"></span>
+                            <input type="text" value="<% if(sold){ %> <%= sold  %> <% } %>" disabled class="input-mini input-number"><span class="glyphicon glyphicon-plus"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </script>
         <script type="text/javascript" src="scripts/jquery.js"></script>
         <script type="text/javascript" src="scripts/vendor/swiper.jquery.js"></script>
         <script type="text/javascript" src="scripts/vendor/underscore.js"></script>
         <script type="text/javascript" src="scripts/vendor/backbone.js"></script>
-        <script type="text/javascript" src="scripts/main.js"></script>  
+        <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 
 </html>
