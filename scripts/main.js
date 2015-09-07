@@ -258,21 +258,45 @@ app.cart=Backbone.Model.extend({
     defaults:{
         amount:0
     }
+
 });
+
+
+app.submit=function(){
+    // 判断总额 
+    var amount=app.cart_view.model.get('amount');
+    if(parseInt(amount)>=0){
+        // 存储所点餐饮信息
+        var dishes=app.dishes_bak.filter(function(model){
+            return parseInt(model.get('sold'))>0;
+        });
+        if(dishes.length>0){
+            // 存档到loaclStorage
+            localStorage.setItem('dishes',JSON.stringify(dishes));
+            window.location.href="order.html";
+        }
+    }
+}
 
 app.cart.view=Backbone.View.extend({
     el:$("#cart"),
     template:_.template($("#cart_template").html()),
     initialize:function(){
-        console.log('app.cart initialize');
         this.model=new app.cart;
         this.listenTo(app.dishes_bak,"all",this.computed);
+    },
+    events:{
+        'click .btn-order' : 'sbumit'
+    },
+    sbumit:function(){
+
+        app.submit();
+
     },
     render:function(){
         this.$el.html(this.template(this.model.toJSON()));
     },
     computed:function(){
-        console.log('app.dishes_bak changed! computed fire');
         var amount=0;
         app.dishes_bak.each(function(model){
             amount+=parseInt(model.get("sold"))*parseFloat(model.get("shop_price"));
