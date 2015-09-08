@@ -273,6 +273,7 @@ app.submit=function(){
         if(dishes.length>0){
             // 存档到loaclStorage
             localStorage.setItem('dishes',JSON.stringify(dishes));
+            localStorage.setItem('set_dishes_time',(new Date()).getTime());
             window.location.href="order.html";
         }
     }
